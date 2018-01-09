@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Weather Chat</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="page-header">
+          <h1>Weather Chat</h1>
+        </div>
+
+        <form>
+          <div class="form-group">
+            <input type="text" class="cityInput" placeholder="Enter City">
+            <button type="button" class="btn btn-primary getTemp" id="temp-button">Get Temp</button>
+            <div class="result">
+            
+            </div>
+
+          </div>
+        </form>
+
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+          </div>
+        </div>
+      </div>
+
+      <script id="weatherchat-template" type="text/x-handlebars-template">
+    <div class="card" data-name="{{name}}">
+        <h3>{{ name }}</h3>
+      <h4>{{ celsous }}</h4>
+          <button class="btn remove" id="removeCard" type="button" data-id="{{currentId}}">Remove</button>
+      <div class="add-comment">Comment</div>
+      <div class="write-comment">
+          <input type="text" class="form-control comment-text" placeholder="Write a comment...">
+          <button class="btn btn-primary commentbtn" type="button" data-id="{{currentId}}">Comment</button>
+    </div>
+    </div>
+
+    <div class="show-comments">
+
+      </div>
+
+    </script>
+
+
+      <script type="text/javascript" src="jquery/dist/jquery.js"></script>
+      <script type="text/javascript" src="bootstrap/dist/js/bootstrap.js"></script>
+      <script type="text/javascript" src="handlebars/dist/handlebars.js"></script>
+      <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
